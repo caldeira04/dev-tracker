@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧠 DevTrack – Gerencie a evolução dos seus projetos
 
-## Getting Started
+**DevTrack** é uma plataforma SaaS voltada para desenvolvedores organizarem a evolução dos seus projetos de forma simples, visual e produtiva.
 
-First, run the development server:
+## ✨ Funcionalidades
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Cada projeto possui três áreas principais:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### ✅ Tasks (To-Do List)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Organize as tarefas do projeto em uma lista simples de "afazeres".
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Campos de uma Task:**
+- `title`: Título da tarefa
+- `description`: Descrição detalhada
+- `priority`: Prioridade (ex: baixa, média, alta)
+- `isCompleted`: Booleano para tarefa concluída
+- `dateCompleted`: Data de conclusão (opcional)
+- `dueDate`: Prazo (opcional)
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+### 💡 Ideas (Kanban)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Organize ideias de novas funcionalidades, melhorias ou ajustes em um sistema de **Kanban** com status personalizáveis.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Campos de uma Ideia:**
+- `title`: Título da ideia
+- `description`: Detalhes da ideia
+- `status`:  
+  - `brainstorm`  
+  - `in_review`  
+  - `approved`  
+  - `in_progress`  
+  - `done`  
+  - `rejected`
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 📘 Changelog (Timeline)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Mantenha um histórico claro e organizado de tudo que foi feito no projeto com uma timeline.
+
+**Campos de um Changelog:**
+- `date`: Data do evento
+- `description`: Descrição do que foi feito (semelhante a um commit manual)
+
+---
+
+## 💻 Tecnologias Utilizadas
+
+- **Frontend:** [Next.js](https://nextjs.org/), [Shadcn/UI](https://ui.shadcn.com/)
+- **Banco de Dados:** [Neon](https://neon.tech/) (PostgreSQL)
+- **ORM/Data Layer:** [Prisma](https://www.prisma.io/) ou [Convex](https://convex.dev/)
+- **Autenticação:** [Clerk](https://clerk.dev/) ou [NextAuth.js](https://next-auth.js.org/)
+- **Pagamentos:** [Stripe](https://stripe.com/) ou [Pagar.me](https://pagar.me/)
+
+---
+
+## 💸 Planos
+
+| Plano   | Limites                              | Preço     |
+|---------|--------------------------------------|-----------|
+| Free    | 1 projeto / até 30 itens no total    | R$0,00    |
+| Starter | Até 3 projetos / 100 itens no total  | R$19,90   |
+| Pro     | Até 10 projetos / itens ilimitados   | R$49,90   |
+
+> *Itens* = soma de Tasks + Ideas + Changelog entries.
