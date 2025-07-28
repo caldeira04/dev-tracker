@@ -1,5 +1,7 @@
+import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Code } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -12,6 +14,11 @@ export default function Home() {
         <Label className="text-sm text-muted-foreground text-center">
           Track your development progress
         </Label>
+        <Button className="mt-4 bg-primary text-primary-foreground">
+          <Link href="/dashboard">
+            See your dashboard
+          </Link>
+        </Button>
       </div>
     </div>
   );
